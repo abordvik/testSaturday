@@ -1,0 +1,44 @@
+.bigLink {
+    /* using em to regular size of the links in news feed */
+    font-size: 1.5em;
+}
+.smallImg {
+    /* using padding to ensure space between images and border */
+    padding-left: 7px;
+}
+.smallImg:hover {
+    /* using the hover will give the image a black border around to emphasis the image */
+    border: 3px solid;
+}
+
+/* added opacity to the ad, this will ensure a less flashy effect on sources, but will show 100% on hovering */
+#adJap {
+    opacity: 0.75;
+}
+#adJap:hover {
+    opacity: 1;
+}
+
+div .imgSmall {
+    display: inline;
+}
+
+.topper {
+    margin-top: 25px;
+}
+
+.btn-holder {
+    text-align: center;
+}
+
+/* The way this written is NOT ideal for bootstrap*/
+#btnMess {
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 280px;
+    margin-bottom: 20px;
+    color: hotpink;
+    background-color: lightskyblue;
+}

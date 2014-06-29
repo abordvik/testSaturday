@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Test Saturday Phase 1</title>
+    <!-- Calling online jQuery library to use jQuery in javascript -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Own style sheet to overwrite potential bootstrap styles-->
+    <link rel="stylesheet"  href="css/layout.css">
+</head>
+<body>
+<!-- You can navigate between the two pages using the nav bar Jap News=main; other elements=second.html-->
+    <!-- Nav Bar added universal-->
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <!-- The menu bar will collapse into Nav bar that shows when activated by pressing on icon -->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- Title of Page: Jap News -->
+            <a class="navbar-brand" href="#">Jap News</a>
+        </div>
+        <!-- Elements in the Nav bar, Latin is active uses Lorem Ipsum-->
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="second.html">Sumo</a></li>
+                <li><a href="second.html">Latin</a></li>
+                <li><a href="second.html">Global</a></li>
+                <li><a href="second.html">National</a></li>
+            </ul>
+            <!-- Prepared for adding a user module -->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a id="login" href="#">Login</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Nav bar end -->
+    <!-- formOne starting; top left -->
+    <form id="formOne" class="col-lg-8">
+        <!-- Sortable bar top -->
+        <div>
+            <div>
+              <!-- Quick overview of topics in the news feed-->
+                    <ul class="nav nav-pills">
+                        <li class="active"><a href="#">Topic X</a></li>
+                        <li><a href="#">Topic X</a></li>
+                        <li><a href="#">Topic X</a></li>
+                        <li><a href="#">Topic X</a></li>
+                        <li><a href="#">Topic X</a></li>
+                        <li><a href="#">Topic X</a></li>
+                        <li><a href="#">Topic X</a></li>
+                        <li><a href="#">Topic X</a></li>
+                    </ul>
+                </div>
+        </div>
+        <!-- News list -->
+        <div class="col-lg-8">
+        <ul id="newsLatest">
+            <!-- By assigning the id, it is possible to late make javascript auto populate and update the news feed -->
+            <li><a href="#" class="bigLink">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+            <li><a href="#" class="bigLink">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+            <li><a href="#" class="bigLink">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+            <li><a href="#" class="bigLink">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+            <li><a href="#" class="bigLink">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+            <li><a href="#" class="bigLink">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+            <li><a href="#" class="bigLink">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+            <li><a href="#" class="bigLink">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+        </ul>
+            <button type="button" class="btn-group-lg btn-info" id="newNews">Get More!!</button>
+            <!-- newNews would update the above list and populate it with other news stories from the DB -->
+        </div>
+        <!-- Top story of the day with image also showing headline -->
+        <div class="col-lg-4">
+            <img src="img/1.png" id="mainNews">
+            <h3>Main news story</h3>
+        </div>
+    </form>
+    <!-- Ending formOne -->
+    <!-- formThree starting; top right; by adding this here allows to show ads during the mobile experience as well -->
+    <form id="formThree" class="col-lg-4">
+        <!-- Ad sidebar-->
+        <img src="img/7.png" id="adJap" width="400">
+        <!-- Weather -->
+        <h2><a href="#">Weather Forecast</a></h2>
+        <p>Today and tomorrow</p>
+        <a href="#"><img src="img/14.png" id="imgWeather" width="400"></a>
+        <!-- both Weather and imgWeather has been given a link option -->
+    </form>
+    <!-- Ending formThree -->
+    <!-- formTwo starting; bottom left -->
+    <form id="formTwo" class="col-lg-8">
+        <h2>Image bar and headlines</h2>
+        <div class="row">
+                <div class="imgSmall"><img src="img/2.png" class="smallImg"></div>
+                <div class="imgSmall"><img src="img/3.png" class="smallImg"></div>
+                <div class="imgSmall"><img src="img/4.png" class="smallImg"></div>
+                <div class="imgSmall"><img src="img/5.png" class="smallImg"></div>
+                <div class="imgSmall"><img src="img/6.png" class="smallImg"></div>
+        </div>
+        <div>
+        <ul id="newsLatest">
+            <!-- By assigning the id, it is possible to late make javascript auto populate and update the news feed -->
+            <li><a href="#" class="smallLink">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+            <li><a href="#" class="smallLink">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+            <li><a href="#" class="smallLink">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+            <li><a href="#" class="smallLink">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+            <li><a href="#" class="smallLink">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+            <li><a href="#" class="smallLink">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+            <li><a href="#" class="smallLink">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+            <li><a href="#" class="smallLink">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+        </ul>
+        </div>
+    </form>
+    <!-- Ending formTwo -->
+    <!-- formFour starting; mid right-->
+    <form id="formFour" class="col-lg-4">
+        <h3>Focused topics</h3>
+        <!-- Building up the side bar with the image and then the title and paragraph next to it -->
+        <div class="row">
+            <div class="col-lg-5">
+                <img src="img/8.png" width="150px">
+                <!-- Fixed width of the image, a bootstrap split of 5:7 -->
+            </div>
+            <div class="col-lg-7">
+                <h5>Blah Blah</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt dolor lectus.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5">
+                <img src="img/9.png" width="150px">
+            </div>
+            <div class="col-lg-7">
+                <h5>Blah Blah</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt dolor lectus.</p>
+            </div>
+        </div>
+    </form>
+    <!-- Ending formFour -->
+    <!-- formFive starting; bottom right-->
+    <form id="formFive" class="col-lg-4 col-lg-offset-8">
+        <h3>Video news</h3>
+        <!-- Adding a class to the div to style the picture and text box -->
+        <div class="row">
+            <!-- Bootstrap split 6:6 with image and then headline and links -->
+            <div class="col-lg-6">
+                <img src="img/10.png" width="180px">
+            </div>
+            <div class="col-lg-6">
+                <h5>Blah Blah</h5>
+                <ul>
+                    <li><a href="#" class="smallLink">Lorem ipsum dolor sit</a></li>
+                    <li><a href="#" class="smallLink">Lorem ipsum dolor sit</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="img/11.png" width="180px">
+            </div>
+            <div class="col-lg-6">
+                <h5>Blah Blah</h5>
+                <ul>
+                    <li><a href="#" class="smallLink">Lorem ipsum dolor sit</a></li>
+                    <li><a href="#" class="smallLink">Lorem ipsum dolor sit</a></li>
+                </ul>
+            </div>
+        </div>
+    </form>
+    <!-- Ending formFive -->
+    <script src="js/custom.js"></script>
+
+
+</body>
+</html>

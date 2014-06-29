@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Test Saturday Phase 1</title>
+    <!-- Calling online jQuery library to use jQuery in javascript -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Own style sheet to overwrite potential bootstrap styles-->
+    <link rel="stylesheet"  href="css/layout.css">
+</head>
+<body>
+<!-- Nav Bar added universal-->
+<div class="navbar navbar-default">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <!-- The menu bar will collapse into Nav bar that shows when activated by pressing on icon -->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <!-- Title of Page: Jap News ; the only working link, that will get you back to the main-->
+        <a class="navbar-brand" href="main.html">Jap News</a>
+    </div>
+    <!-- Elements in the Nav bar, Latin is active uses Lorem Ipsum-->
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="#">Sumo</a></li>
+            <li><a href="#">Latin</a></li>
+            <li><a href="#">Global</a></li>
+            <li><a href="#">National</a></li>
+        </ul>
+        <!-- Prepared for adding a user module -->
+        <ul class="nav navbar-nav navbar-right">
+            <li><a id="login" href="#">Login</a></li>
+        </ul>
+    </div>
+</div>
+<!-- Nav bar end -->
+<!-- -->
+<div class="col-lg-8 col-lg-offset-2"
+<form>
+    <div class="row">
+    <div class="col-lg-3">
+        <img src="img/12.png">
+    </div>
+    <div class="col-lg-9">
+        <!-- add call to JS date -->
+        <h4 id="dateJS"></h4>
+        <h3>Lady Gaga Party</h3>
+        <!-- social bar -->
+        <img src="img/15.png">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ante tellus, congue ac purus eget,
+            venenatis malesuada lacus. Nullam commodo id dolor non fermentum. Curabitur aliquet, elit vel
+            vestibulum pharetra, mi diam sollicitudin nisl, a vehicula ligula turpis non erat. Maecenas luctus sapien
+            felis, vel imperdiet dolor dignissim in. Curabitur ultricies massa imperdiet mauris gravida, ac eleifend
+            nibh faucibus. Morbi vitae dictum eros, eu malesuada orci. Nunc non ultricies odio, sed dignissim augue.
+            Pellentesque convallis leo non lacus feugiat,
+            vel tempus urna ullamcorper. Nulla fermentum lacus quis velit consectetur pharetra.</p>
+        <div>
+            <ul id="gagaLink">
+                <!-- By assigning the id, it is possible to late make javascript auto populate and update the news feed -->
+                <li><a href="#" class="smallLink">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+                <li><a href="#" class="smallLink">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+                <li><a href="#" class="smallLink">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</form>
+<div class="row topper">
+    <div class="btn-group btn-group-lg btn-holder"><button type="button" id="btnMess">Give me more GaGa</button></div>
+    <br>
+    Insert your<input type="email" name="gagaSignUp" placeholder="Email" id="gagaEmail"> to sign up for GaGa newZ
+    <button class="btn-group btn-default" type="button">Sign Me Up!</button>
+</div>
+<div class="row topper">
+<!-- adOne start -->
+<form class="col-lg-6">
+    <img src="img/13.png" width="400" align="right">
+</form>
+<!-- adOne End -->
+<!-- adTwo start -->
+<form class="col-lg-6">
+    <img src="img/16.png" width="400" align="left">
+</form>
+<!-- adTwo End -->
+<!-- JS is located at the bottom part of the DOM, this way this is the last element that loads,
+    this way any content is loaded before the JS is loaded. It is not that relevant for this project,
+    but will be for larger project. -->
+<script src="js/custom.js"></script>
+</div>
+</body>
+</html>
